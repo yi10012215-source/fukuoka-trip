@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>福岡 5 日行程 7/3–7/7 | Travel Assistant</title>
+  <style>
+    /* ── TicNote Topbar ── */
+    :root {
+      --ticnote-brand: #26B2BF;
+      --ticnote-badge: #79F2F2;
+      --ticnote-line: #e5e7eb;
+      --ticnote-muted: #64748b;
+      --ticnote-text: #0f172a;
+    }
+    .meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 32px;
+      border-bottom: 1px solid var(--ticnote-line);
+      background: #ffffff !important;
+      color: var(--ticnote-text) !important;
+      box-sizing: border-box;
+    }
+    .meta-brand, .meta-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .meta-logo { height: 28px; width: 28px; display: block; object-fit: contain; flex: 0 0 auto; }
+    .meta-divider { width: 1px; height: 18px; background: var(--ticnote-line); flex: 0 0 auto; }
+    .meta-tagline {
+      font-size: 11px; font-weight: 650; line-height: 1.2;
+      color: var(--ticnote-muted); letter-spacing: 0.02em;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .meta-tag {
+      display: inline-flex; align-items: center; min-height: 22px;
+      padding: 3px 9px; border-radius: 999px;
+      background: rgba(121,242,242,0.28); color: #057985;
+      border: 1px solid rgba(38,178,191,0.28);
+      font-size: 10px; font-weight: 800; line-height: 1;
+      text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap;
+    }
+    .meta-date { color: var(--ticnote-muted); font-size: 12px; font-weight: 500; white-space: nowrap; }
+    @media (max-width: 600px) {
+      .meta-bar { align-items: flex-start; flex-direction: column; padding: 14px 16px; }
+      .meta-right { width: 100%; justify-content: space-between; }
+      .meta-tagline { max-width: min(62vw,320px); display: none; }
+      .meta-date { display: none; }
+    }
+
+    /* ── Page Base (Urban Pulse + Warm Ink accent) ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, 'Segoe UI', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      background: #f5f5f7;
+      color: #3d3d3f;
+    }
+    a { color: #0071e3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Hero Header ── */
+    .trip-header {
+      background: linear-gradient(135deg, #1d1d1f 0%, #2d3a5c 100%);
+      color: #fff;
+      padding: 48px 32px 40px;
+      text-align: center;
+    }
+    .trip-header h1 {
+      font-family: system-ui, 'Segoe UI', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+    }
+    .trip-header .subtitle {
+      font-size: 15px;
+      color: rgba(255,255,255,0.72);
+      margin: 0 0 18px;
+    }
+    .trip-meta-chips {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+    }
+    .chip {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+    }
+
+    /* ── Pass Info Banner ── */
+    .pass-banner {
+      background: #fff;
+      border-left: 4px solid #0071e3;
+      margin: 24px 24px 0;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: #1d1d1f;
+    }
+    .pass-banner strong { color: #0071e3; }
+    .pass-banner ul { margin: 6px 0 0 16px; padding: 0; }
+    .pass-banner li { margin-bottom: 4px; }
+
+    /* ── Main Layout ── */
+    main { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; }
+
+    /* ── Day Section ── */
+    .day-section { margin-bottom: 40px; }
+    .day-header {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #e0e0e5;
+      padding-bottom: 10px;
+    }
+    .day-number {
+      font-family: system-ui, 'Segoe UI', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #0071e3;
+      line-height: 1;
+      min-width: 60px;
+    }
+    .day-title { font-size: 1.1rem; font-weight: 700; color: #1d1d1f; }
+    .day-transport-badge {
+      margin-left: auto;
+      background: #f0f4ff;
+      border: 1px solid #ccd9ff;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #3450a4;
+      white-space: nowrap;
+    }
+
+    /* ── Activities Grid ── */
+    .activities-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+    @media (min-width: 600px) {
+      .activities-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .activities-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* ── Activity Card ── */
+    .activity-card {
+      background: #ffffff;
+      border: 1px solid #e0e0e5;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .activity-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .card-summary {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px 10px;
+    }
+    .time-badge {
+      background: #f5f5f7;
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-family: 'Courier New', Consolas, monospace;
+      font-size: 12px;
+      color: #86868b;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .card-name {
+      font-weight: 700;
+      color: #1d1d1f;
+      font-size: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+    .tag {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-sight { background: #e8f0fe; color: #1a73e8; }
+    .tag-food  { background: #fce8e6; color: #c5221f; }
+    .tag-shop  { background: #e6f4ea; color: #137333; }
+    .tag-train { background: #fff3e0; color: #e65100; }
+    .tag-pass  { background: #f3e8ff; color: #7c3aed; }
+
+    /* Warm Ink style for historical/cultural cards */
+    .activity-card.warm {
+      background: #fffdf7;
+      border-color: #e8d5b0;
+    }
+
+    .card-details {
+      border-top: 1px solid #f0f0f2;
+      font-size: 13px;
+      color: #3d3d3f;
+    }
+    .card-details summary {
+      padding: 8px 16px;
+      cursor: pointer;
+      color: #0071e3;
+      font-size: 12px;
+      font-weight: 600;
+      list-style: none;
+      user-select: none;
+    }
+    .card-details summary::-webkit-details-marker { display: none; }
+    .card-details summary::before {
+      content: '▸ ';
+      font-size: 11px;
+    }
+    details[open] > summary::before { content: '▾ '; }
+    .card-details .detail-body {
+      padding: 0 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .detail-body p { margin: 0; }
+    .detail-body .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #86868b;
+      letter-spacing: 0.04em;
+    }
+    .ticket-tag {
+      display: inline-block;
+      background: #7c3aed;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-left: 4px;
+    }
+    .ticket-tag.free { background: #137333; }
+    .ticket-tag.buy  { background: #0071e3; }
+    .ticket-tag.reserved { background: #e65100; }
+
+    /* ── Food Row (separate from grid) ── */
+    .food-row {
+      margin-top: 14px;
+    }
+    .food-row-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #86868b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .food-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      align-items: start;
+    }
+    .food-card {
+      background: #fff8f6;
+      border: 1px solid #f5cfc9;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 13px;
+    }
+    .food-card .fname { font-weight: 700; color: #1d1d1f; margin-bottom: 4px; }
+    .food-card .fmeta { color: #86868b; font-size: 12px; }
+    .food-card .ftip { color: #3d3d3f; margin-top: 5px; font-size: 12px; }
+
+    /* ── Notice Block ── */
+    .notice-block {
+      background: #fff9e6;
+      border: 1px solid #f5d67a;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #7a5800;
+    }
+    .notice-block strong { color: #7a5800; }
+
+    /* ── Concierge Section ── */
+    .concierge {
+      background: #fff;
+      border-top: 2px solid #e0e0e5;
+      padding: 32px 16px 40px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .concierge h2 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #1d1d1f;
+      margin: 0 0 20px;
+      letter-spacing: -0.01em;
+    }
+    .concierge-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 640px) {
+      .concierge-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .concierge-card {
+      background: #f5f5f7;
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .concierge-card h3 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #1d1d1f;
+      margin: 0 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .c-icon {
+      width: 18px; height: 18px; flex-shrink: 0;
+    }
+    .concierge-card ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 13px;
+      color: #3d3d3f;
+    }
+    .concierge-card li { margin-bottom: 5px; }
+    .budget-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .budget-table td { padding: 5px 0; }
+    .budget-table td:last-child { text-align: right; font-family: 'Courier New', Consolas, monospace; color: #1d1d1f; font-weight: 700; }
+    .budget-table tr:not(:last-child) td { border-bottom: 1px solid #e0e0e5; }
+    .budget-total td { font-weight: 800 !important; color: #0071e3 !important; border-top: 2px solid #0071e3 !important; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #86868b;
+    }
+  </style>
+</head>
+<body>
+
+<!-- TicNote Meta Bar -->
+<div class="meta-bar" data-agent-name="Travel Assistant">
+  <div class="meta-brand">
+    <svg class="meta-logo" aria-label="TicNote" role="img" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>logo</title>
+      <defs>
+        <linearGradient x1="40.0497765%" y1="8.21786557%" x2="57.981802%" y2="74.8139004%" id="lg1"><stop stop-color="#00787D" offset="0%"></stop><stop stop-color="#00A3A9" offset="100%"></stop></linearGradient>
+        <linearGradient x1="58.3617728%" y1="2.53966718%" x2="41.7360669%" y2="100%" id="lg2"><stop stop-color="#00D6E0" offset="0%"></stop><stop stop-color="#00C6D0" offset="39.0280387%"></stop><stop stop-color="#00B1B9" offset="99.9972684%"></stop></linearGradient>
+        <linearGradient x1="62.4295868%" y1="2.53966718%" x2="37.7158497%" y2="100%" id="lg3"><stop stop-color="#00D6E0" offset="0%"></stop><stop stop-color="#00C6D0" offset="39.0280387%"></stop><stop stop-color="#00B1B9" offset="99.9972684%"></stop></linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="lg4"><stop stop-color="#00D9E1" offset="0%"></stop><stop stop-color="#00D9E1" offset="100%"></stop></linearGradient>
+      </defs>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+          <polygon fill="url(#lg1)" points="15.4444933 16.6903284 14.614516 23.9090255 8.88012777 15.8574019 11.9736793 9.19398919"></polygon>
+          <path d="M0.646292396,21.8646016 L4.38145348,9.10599683 C5.12667494,7.37690254 6.99520137,6.42105989 8.83341597,6.82860029 L9.66207428,7.01231754 C11.4053356,7.39880636 12.5173987,9.11071556 12.1634943,10.8608828 C12.1630986,10.8628399 12.162704,10.8647884 12.1623105,10.8667283 C12.0690507,11.3265472 10.7668967,15.6568014 8.25584868,23.8574908 C7.85943357,25.1521204 6.92121056,26.2132228 5.68241879,26.759671 L4.58836193,27.2422747 C3.58537456,27.6847063 2.40964398,27.3692744 1.76280317,26.4842171 L1.35729148,25.9293648 C0.501583882,24.75852 0.238835839,23.2563963 0.646292396,21.8646016 Z" fill="url(#lg2)"></path>
+          <path d="M17.0333206,9.59169288 L13.72187,20.9114572 C13.2215009,22.6323335 14.1994211,24.4353523 15.9147283,24.9544914 L16.581862,25.1564 C18.6580023,25.7847456 20.8495786,24.6067657 21.470915,22.528517 L21.6241953,22.0158245 L24.634605,11.6623815 C22.0642622,12.5463773 19.2145279,11.8588548 17.3300253,9.90008982 L17.0333206,9.59169288 Z" fill="url(#lg3)"></path>
+          <path d="M20.2835337,9.2502296 L20.2209645,9.26521193 C19.3371143,9.47685163 18.5406215,8.68212756 18.7502957,7.79780907 L18.7660881,7.73120304 C19.0767969,6.42076314 19.1646402,5.06736047 19.0259344,3.72775106 L19.0121956,3.59506308 C18.9137483,2.6442665 19.7485394,1.86131447 20.6910826,2.02043218 C21.9298856,2.22956371 23.1969245,2.204476 24.4264781,1.94647035 L24.5009317,1.93084724 C25.4030138,1.74155717 26.1965779,2.55281953 25.9874396,3.4505077 L25.9151973,3.7605948 C25.6217449,5.02018591 25.5463146,6.32075011 25.6921814,7.6058209 L25.6962579,7.64173373 C25.8033172,8.58491516 24.9620218,9.35975787 24.0308136,9.17562699 C22.7909133,8.93045741 21.5126935,8.95590481 20.2835337,9.2502296 Z" fill="url(#lg4)" transform="translate(22.3645, 5.6258) rotate(58) translate(-22.3645, -5.6258)"></path>
+        </g>
+      </g>
+    </svg>
+    <div class="meta-divider"></div>
+    <span class="meta-tagline">Travel Assistant</span>
+  </div>
+  <div class="meta-right">
+    <span class="meta-tag">Powered by TicNote Cloud</span>
+    <span class="meta-date" id="r-date"></span>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="trip-header">
+  <h1>福岡 5 日自由行</h1>
+  <p class="subtitle">博多 · 由布院 · 門司港 · 小倉 · 太宰府 · 柳川</p>
+  <div class="trip-meta-chips">
+    <span class="chip">出發：7/3（四）桃園 06:45 起飛</span>
+    <span class="chip">回程：7/7（一）福岡 10:05 起飛</span>
+    <span class="chip">住宿：博多康福特飯店</span>
+    <span class="chip">票券：福岡廣域PASS + 九州FunPass 14天7合1</span>
+    <span class="chip">地鐵一日券 ¥640（第1天）</span>
+    <span class="chip">由布院之森（已訂位）</span>
+  </div>
+</div>
+
+<!-- Pass Banner -->
+<div class="pass-banner">
+  <strong>票券使用提醒</strong>
+  <ul>
+    <li><strong>福岡廣域PASS（JR Kyushu Mobile Pass: Fukuoka Wide Area）</strong>：可搭乘 JR 博多往返門司港、小倉、大牟田等全區間，含特急自由席。<strong>西鐵路線完全不適用</strong>。</li>
+    <li><strong>九州FunPass 14天7合1</strong>（開卡後14天內選用7個景點）：包含福岡塔、柳川遊船單程、THE OUTLETS KITAKYUSHU購物券、小倉城、門司港懷舊展望室、九州鐵道紀念館或舊大阪商船（二選一）。</li>
+    <li><strong>第4天交通方案比較（博多→柳川）</strong>：
+      <br>
+      <strong>方案A 推薦・廣域PASS省錢路線：</strong>博多 JR鹿兒島本線快速→大牟田（約55分，廣域PASS免費）→ 大牟田站步行3分轉西鐵大牟田站 → 西鐵天神大牟田線→西鐵柳川（約10分，另購<strong>¥340</strong>）。全程約70分，自費僅¥340。
+      <br>
+      <strong>方案B 全程西鐵：</strong>博多→地鐵至天神→西鐵天神站搭特急→西鐵柳川（約49分，<strong>¥870</strong>）。全程約60分，但需自費¥870。
+      <br>
+      <strong>結論：方案A比方案B省 ¥530，強烈推薦使用方案A（廣域PASS最後一天好好利用）。</strong>
+    </li>
+  </ul>
+</div>
+
+<main>
+
+  <!-- ===== DAY 1 ===== -->
+  <section class="day-section">
+    <div class="day-header">
+      <div class="day-number">01</div>
+      <div class="day-title">7/3（四）抵達福岡・市區精華 + 福岡塔夜景</div>
+      <div class="day-transport-badge">地鐵一日券 ¥640</div>
+    </div>
+
+    <div class="activities-grid">
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">14:00</span>
+          <span class="card-name">抵達福岡・辦理入住</span>
+          <span class="tag tag-food">抵達</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">航班</span><br>桃園 06:45 起飛，預計抵達福岡約 09:30～10:00（飛行約2小時，含入境）</p>
+            <p><span class="label">入境</span><br>福岡機場國際線入境 → 通關 → 取行李，約需1小時</p>
+            <p><span class="label">機場至飯店</span><br>地鐵空港線「福岡空港」→「博多」約5分，¥260 → 步行至博多康福特飯店辦理入住（可能需等到15:00標準入住時間，可先寄放行李）</p>
+            <p><span class="label">早餐/午餐</span><br>可在機場或博多站 KITTE 地下1樓覓食</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">10:00</span>
+          <span class="card-name">大濠公園散步</span>
+          <span class="tag tag-sight">景點</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">門票</span><br>免費入園<span class="ticket-tag free">免費</span></p>
+            <p><span class="label">營業時間</span><br>全天開放（園內咖啡廳 10:00～）</p>
+            <p><span class="label">交通</span><br>地鐵七隈線「大濠公園站」出口即達，步行3分鐘</p>
+            <p><span class="label">推薦</span><br>湖畔租借腳踏船、沿湖慢跑，是福岡市民最愛的綠洲</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">11:30</span>
+          <span class="card-name">天神・博多逛街</span>
+          <span class="tag tag-shop">購物</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">推薦</span><br>天神地下街 / PARCO / VIORO / 岩田屋本店</p>
+            <p><span class="label">交通</span><br>地鐵空港線「天神站」即達</p>
+            <p><span class="label">美食</span><br>午餐可在天神地下街或商場美食街解決</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">14:30</span>
+          <span class="card-name">住吉神社</span>
+          <span class="tag tag-sight">景點</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">門票</span><br>免費參拜<span class="ticket-tag free">免費</span></p>
+            <p><span class="label">參拜時間</span><br>全天開放，社務所 9:00～17:00</p>
+            <p><span class="label">交通</span><br>博多站步行約12分鐘，或地鐵「博多站」下車</p>
+            <p><span class="label">特色</span><br>博多最古老神社之一，境內清幽，可購買安產・緣份御守</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">16:30</span>
+          <span class="card-name">福岡塔（黃昏→夜景）</span>
+          <span class="tag tag-pass">FunPass</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">門票</span><br>使用九州FunPass 7合1<span class="ticket-tag">FunPass</span>（原價成人¥800）</p>
+            <p><span class="label">營業時間</span><br>09:30～22:00（最後入場 21:30）</p>
+            <p><span class="label">地址</span><br>2-3-26 Momochihama, Sawara-ku, Fukuoka</p>
+            <p><span class="label">交通</span><br>博多駅或天神出發，搭西鐵巴士至「福岡タワー南口」約25分；或地鐵西新站1號口出步行20分鐘</p>
+            <p><span class="label">推薦</span><br>16:30入場可同時欣賞夕陽、夜景；123m高展望台可360°俯瞰博多灣與市區，建議避開週末人潮</p>
+            <p><span class="label">注意</span><br>週末人潮多，電梯等候可能需20-40分鐘</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">19:00</span>
+          <span class="card-name">福岡屋台文化</span>
+          <span class="tag tag-food">餐飲</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">推薦地點</span><br>中洲屋台街（地鐵「中洲川端站」步行3分）或天神屋台</p>
+            <p><span class="label">必吃</span><br>豚骨拉麵 ¥800～ / 關東煮 ¥200起 / 博多雞白湯 / 燒咖哩</p>
+            <p><span class="label">燒咖哩推薦</span><br>「モンスターカレー博多店」或「MURASAKI」，博多特色燒咖哩約¥1,000～¥1,500（請現場確認營業）</p>
+            <p><span class="label">注意</span><br>屋台現金為主，多數不收信用卡，帶足日幣現金</p>
+          </div>
+        </details>
+      </article>
+
+    </div>
+
+    <div class="notice-block">
+      <strong>Day 1 交通補充：</strong>購買地鐵一日券 ¥640，搭地鐵從博多站出發遊市區，前往福岡塔請換乘市區公車（地鐵一日券不含公車，需另付約¥210）。晚上屋台結束後搭地鐵返回博多站。
+    </div>
+  </section>
+
+  <!-- ===== DAY 2 ===== -->
+  <section class="day-section">
+    <div class="day-header">
+      <div class="day-number">02</div>
+      <div class="day-title">7/4（五）由布院 — 由布院之森的翠綠之旅</div>
+      <div class="day-transport-badge">由布院之森（已訂位）</div>
+    </div>
+
+    <div class="activities-grid">
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">08:30</span>
+          <span class="card-name">前往博多站搭車</span>
+          <span class="tag tag-train">交通</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">車次</span><br>由布院之森3號 — 博多 09:24 → 由布院 12:00（部分車次時刻，以購票車票為準）</p>
+            <p><span class="label">搭乘位置</span><br>博多站 JR 月台（JR特急，需憑訂票搭乘）</p>
+            <p><span class="label">注意</span><br>請提早15～20分鐘到月台，確認列車節次；列車設有餐飲服務車（甜點、限定便當）建議提早排隊</p>
+            <p><span class="label">用票</span><br>已訂位票（去程由布院之森3號 10:11出發）<span class="ticket-tag reserved">已訂</span></p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">12:00</span>
+          <span class="card-name">由布院站抵達</span>
+          <span class="tag tag-sight">景點</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">第一站</span><br>由布院站步行至「金鱗湖」約15分鐘</p>
+            <p><span class="label">午餐</span><br>站前表參道商店街有多家餐廳、甜品店，可在此解決午餐</p>
+            <p><span class="label">推薦美食</span><br>布丁 / 牛奶冰淇淋 / 由布院布丁（B-speak） / 創作料理</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">13:00</span>
+          <span class="card-name">由布院表參道商店街</span>
+          <span class="tag tag-shop">購物</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">範圍</span><br>由布院站前延伸至金鱗湖，約1km，兩側有工藝品、溫泉雜貨、甜品</p>
+            <p><span class="label">必買</span><br>由布院牛乳布丁 / 溫泉蒸蛋 / 抹茶點心</p>
+            <p><span class="label">費用</span><br>個人消費為主，¥500～¥2,000</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">14:30</span>
+          <span class="card-name">金鱗湖散策</span>
+          <span class="tag tag-sight">景點</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">門票</span><br>免費<span class="ticket-tag free">免費</span></p>
+            <p><span class="label">開放時間</span><br>全天</p>
+            <p><span class="label">特色</span><br>由布岳倒映水中，冬天晨霧最美；湖邊小神社「天祖神社」值得一訪</p>
+            <p><span class="label">建議</span><br>湖邊散步約30分鐘，可找間小咖啡廳坐下感受氛圍</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">15:30</span>
+          <span class="card-name">自由探索 / 伴手禮採買</span>
+          <span class="tag tag-shop">購物</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">推薦</span><br>「湯の坪街道」兩側的個性小店；或前往「Flora」等雜貨鋪</p>
+            <p><span class="label">早點回站</span><br>回程車次 17:17，建議 16:45 前回到由布院站</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">17:17</span>
+          <span class="card-name">搭由布院之森回博多</span>
+          <span class="tag tag-train">交通</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">車次</span><br>由布院之森6號 — 由布院 17:17 → 博多 20:03（以訂票為準）<span class="ticket-tag reserved">已訂</span></p>
+            <p><span class="label">晚餐</span><br>返博多後可至博多屋台、KITTE博多或拉麵街解決晚餐</p>
+          </div>
+        </details>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== DAY 3 ===== -->
+  <section class="day-section">
+    <div class="day-header">
+      <div class="day-number">03</div>
+      <div class="day-title">7/5（六）門司港懷舊 + 小倉城 + 唐戶・旦過市場海鮮</div>
+      <div class="day-transport-badge">福岡廣域PASS + FunPass</div>
+    </div>
+
+    <div class="activities-grid">
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">07:30</span>
+          <span class="card-name">博多→門司港 JR特急</span>
+          <span class="tag tag-train">交通</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">路線</span><br>博多站搭 JR 鹿兒島本線特急或普通（廣域PASS適用）→ 小倉約50分 → 再換乘鹿兒島本線至門司港 約15分</p>
+            <p><span class="label">用票</span><br>福岡廣域PASS<span class="ticket-tag">PASS</span>（全額覆蓋博多→門司港）</p>
+            <p><span class="label">注意</span><br>門司港車站為百年木造歷史建築，下車時拍照打卡</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">09:00</span>
+          <span class="card-name">門司港懷舊地區散步</span>
+          <span class="tag tag-sight">景點</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">景點</span><br>舊門司港海關大樓（免費）/ 舊大阪商船（FunPass可使用）/ 藍翼橋（整點開橋）/ 舊三井俱樂部</p>
+            <p><span class="label">舊大阪商船</span><br>使用 FunPass 7合1<span class="ticket-tag">FunPass</span>（原價約¥150）· 營業時間 9:00～17:00，週二定休</p>
+            <p><span class="label">門司港懷舊展望室（31F）</span><br>使用 FunPass 7合1<span class="ticket-tag">FunPass</span>（原價¥300）· 9:00～17:00 (最後入場16:30)，若逢定休請參照官方公告</p>
+            <p><span class="label">提醒</span><br>舊大阪商船與懷舊展望室需各用1次FunPass，請確認剩餘可用次數</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">10:30</span>
+          <span class="card-name">九州鐵道紀念館</span>
+          <span class="tag tag-pass">FunPass</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">門票</span><br>使用 FunPass 7合1<span class="ticket-tag">FunPass</span>（原價成人¥300）</p>
+            <p><span class="label">營業時間</span><br>9:00～17:00（最後入場16:30），週二定休（逢假日順延）</p>
+            <p><span class="label">交通</span><br>門司港站步行3分鐘</p>
+            <p><span class="label">亮點</span><br>九州鐵路歷史文物、實體列車展示、模擬駕駛體驗</p>
+            <p><span class="label">備注</span><br>FunPass 7合1中九州鐵道紀念館與舊大阪商船二選一，請事先決定使用哪項</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">12:30</span>
+          <span class="card-name">門司港燒咖哩午餐</span>
+          <span class="tag tag-food">餐飲</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">必吃</span><br>門司港燒咖哩（焗烤咖哩）是門司港特色美食</p>
+            <p><span class="label">推薦店家</span><br>「BEAR FRUITS」（門司港駅附近） / 「旭軒」/ 各懷舊地區餐廳皆有供應</p>
+            <p><span class="label">價格</span><br>約¥900～¥1,500，Please verify before visiting</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">14:00</span>
+          <span class="card-name">小倉城</span>
+          <span class="tag tag-pass">FunPass</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">門票</span><br>使用 FunPass 7合1<span class="ticket-tag">FunPass</span>（原價成人¥350）</p>
+            <p><span class="label">營業時間</span><br>9:00～18:00（4月～10月；最後入場17:30），11月～3月至17:00</p>
+            <p><span class="label">交通</span><br>門司港 → 小倉（JR廣域PASS，約15分）→ 小倉城步行10分鐘</p>
+            <p><span class="label">亮點</span><br>天守閣登頂俯瞰北九州市，城內有體驗型歷史展示（甲冑試穿）</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">15:30</span>
+          <span class="card-name">THE OUTLETS KITAKYUSHU</span>
+          <span class="tag tag-pass">FunPass</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">優惠</span><br>使用 FunPass 購物券（折扣金額依 FunPass 官方規定）<span class="ticket-tag">FunPass</span></p>
+            <p><span class="label">營業時間</span><br>10:00～20:00（Please verify before visiting）</p>
+            <p><span class="label">交通</span><br>小倉站搭接駁巴士，或計程車約20分（約¥1,500）</p>
+            <p><span class="label">注意</span><br>如時間緊湊可省略，改在旦過市場或博多購物</p>
+          </div>
+        </details>
+      </article>
+
+    </div>
+
+    <div class="food-row">
+      <div class="food-row-title">Day 3 海鮮市場行程（彈性安排）</div>
+      <div class="food-cards">
+        <div class="food-card">
+          <div class="fname">唐戶市場（下關）</div>
+          <div class="fmeta">跨海 · 河豚 · 海鮮</div>
+          <div class="ftip">門司港坐渡輪5分鐘即達（¥400往返），週末有「活きいき馬関街」海鮮攤，建議週五～日前往 8:00～15:00。平日較少攤位。</div>
+        </div>
+        <div class="food-card">
+          <div class="fname">旦過市場（小倉）</div>
+          <div class="fmeta">小倉在地 · 熟食 · 海鮮</div>
+          <div class="ftip">小倉站步行10分，营業時間約 9:00～18:00，週三定休（請現場確認）。可買「ぬか炊き（糠漬煮魚）」、炸雞、水果等在地庶民美食。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice-block">
+      <strong>Day 3 注意（7/5 週六）：</strong>唐戶市場週末有「活きいき馬関街」海鮮攤（週六最佳），門司港渡輪到下關唐戶市場僅5分鐘（¥200單程），強烈建議今天去唐戶市場！旦過市場週三定休，週六可去。建議順序：早上門司港懷舊 → 午前渡輪去唐戶市場吃海鮮 → 回門司港午餐燒咖哩 → 下午小倉城 → 旦過市場晚餐 → 搭JR廣域PASS回博多。
+    </div>
+  </section>
+
+  <!-- ===== DAY 4 ===== -->
+  <section class="day-section">
+    <div class="day-header">
+      <div class="day-number">04</div>
+      <div class="day-title">7/6（日）太宰府 + 柳川遊船 — 水都文化日</div>
+      <div class="day-transport-badge">廣域PASS至大牟田 + 另購西鐵 ¥340</div>
+    </div>
+
+    <div class="activities-grid">
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">08:30</span>
+          <span class="card-name">博多→大牟田→西鐵柳川</span>
+          <span class="tag tag-train">交通</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">推薦方案A（廣域PASS省錢路線）</span><br>
+              <strong>博多 08:3X</strong> → 搭 JR 鹿兒島本線快速/區間快速 → <strong>大牟田站（約55分）</strong><span class="ticket-tag">廣域PASS</span><br>
+              → 大牟田站出站步行約3分鐘至「西鐵大牟田站」<br>
+              → 西鐵天神大牟田線普通 → <strong>西鐵柳川（約10分，¥340）</strong><span class="ticket-tag buy">另購</span><br>
+              <strong>全程約70分 · 自費僅 ¥340</strong>
+            </p>
+            <p><span class="label">方案B 全程西鐵（不用廣域PASS）</span><br>
+              博多→地鐵天神（¥210）→ 西鐵天神站搭特急→西鐵柳川（約49分，<strong>¥870</strong>）<br>
+              全程約65分，但全自費 ¥1,080
+            </p>
+            <p><span class="label">費用比較</span><br>
+              方案A 自費：<strong>¥340</strong>（廣域PASS涵蓋JR段）<br>
+              方案B 自費：<strong>¥1,080</strong>（地鐵¥210 + 西鐵¥870）<br>
+              <strong>方案A 省下 ¥740，強烈推薦！</strong>
+            </p>
+            <p><span class="label">注意</span><br>JR大牟田站與西鐵大牟田站是不同的站，需步行約3分鐘轉換，請留意指標。廣域PASS為電子票，在JR大牟田站出站時感應即可。</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">10:00</span>
+          <span class="card-name">柳川遊船（どんこ舟）</span>
+          <span class="tag tag-pass">FunPass</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">門票</span><br>FunPass 7合1（含柳川遊船單程）<span class="ticket-tag">FunPass</span>。注意 FunPass 僅含「單程」遊船，全程約70分鐘。</p>
+            <p><span class="label">船程</span><br>西鐵柳川站附近出發 → 沖端（御花前）抵達，全長約6km</p>
+            <p><span class="label">官方</span><br>西鐵觀光 柳川遊船（nishitetsu-yanagawa.jp），建議提前預約（旺季）</p>
+            <p><span class="label">提醒</span><br>船夫唱歌表演為一大特色；雨天仍有毯子與傘可使用；終點在御花・沖端，需步行或計程車返回柳川站</p>
+            <p><span class="label">鰻魚飯</span><br>遊船後就近在「若松屋」「元祖本吉屋」等百年老店享用柳川名物鰻魚飯（Please verify before visiting，約¥2,500～¥3,500）</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">12:30</span>
+          <span class="card-name">柳川鰻魚飯午餐</span>
+          <span class="tag tag-food">餐飲</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">必吃</span><br>柳川蒸籠鰻魚飯（せいろ蒸し），在地特色料理，與一般鰻魚飯不同，蒸過後更入味</p>
+            <p><span class="label">推薦</span><br>「若松屋本店」（御花旁）/ 「元祖本吉屋」（創業300年以上，Please verify）</p>
+            <p><span class="label">價格</span><br>約¥2,500～¥4,000</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">14:00</span>
+          <span class="card-name">柳川→太宰府（西鐵轉乘）</span>
+          <span class="tag tag-train">交通</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">路線</span><br>
+              西鐵柳川→西鐵二日市（約35分）→ 換乘太宰府線→太宰府（約5分）<br>
+              票價合計：西鐵柳川→太宰府 約¥670（Please verify）
+            </p>
+            <p><span class="label">備注</span><br>全程西鐵，無法用JR廣域PASS，需另購票</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">15:00</span>
+          <span class="card-name">太宰府天滿宮 + 參道</span>
+          <span class="tag tag-sight">景點</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">門票</span><br>免費參拜（寶物殿需另購票）<span class="ticket-tag free">免費</span></p>
+            <p><span class="label">參拜時間</span><br>6:00～19:00（依季節調整），週末人潮多建議平日前往</p>
+            <p><span class="label">注意</span><br>御本殿2023年起進行修繕工程（預計到2027年），目前有臨時本殿可參拜，仍值得一訪</p>
+            <p><span class="label">必吃</span><br>參道必吃「梅枝餅」（10粒¥1,000），各家現烤香脆</p>
+            <p><span class="label">交通</span><br>太宰府站下車步行5分即達參道入口</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card warm">
+        <div class="card-summary">
+          <span class="time-badge">16:30</span>
+          <span class="card-name">九州國立博物館（選遊）</span>
+          <span class="tag tag-sight">景點</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">門票</span><br>常設展成人¥700（特展另計）<span class="ticket-tag buy">另購</span></p>
+            <p><span class="label">營業時間</span><br>9:30～17:00（最後入場16:30），週一定休</p>
+            <p><span class="label">交通</span><br>從太宰府天滿宮穿越天滿宮境內步行約5分，或有接駁電梯</p>
+            <p><span class="label">注意</span><br>視剩餘時間選擇參觀，如太宰府逛較久可略過</p>
+          </div>
+        </details>
+      </article>
+
+    </div>
+
+    <div class="notice-block">
+      <strong>Day 4 完整回程路線（7/6 週日）：</strong>
+      太宰府站 → 西鐵太宰府線 → 西鐵二日市（約5分，¥180）→ 換天神大牟田線特急 → 西鐵天神（約30分，¥520）→ 天神地鐵或步行至博多（地鐵¥210）。
+      晚餐可在天神 PARCO、岩田屋美食樓層，或返博多後逛中洲屋台。
+      <br><strong>注意：7/6 為週日，太宰府人潮較多，建議 15:00 前到達太宰府。</strong>
+    </div>
+  </section>
+
+  <!-- ===== DAY 5 ===== -->
+  <section class="day-section">
+    <div class="day-header">
+      <div class="day-number">05</div>
+      <div class="day-title">7/7（一）購物衝刺 → 福岡機場 10:05 回台灣</div>
+      <div class="day-transport-badge">地鐵 ¥260 · 早起出發</div>
+    </div>
+
+    <div class="activities-grid">
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">06:30</span>
+          <span class="card-name">飯店退房・前往機場</span>
+          <span class="tag tag-train">交通</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">航班</span><br>福岡機場 10:05 起飛，國際線<strong>建議 07:30 前抵達機場</strong>（報到、安檢、出境至少需1.5～2小時）</p>
+            <p><span class="label">路線</span><br>博多康福特飯店 → 步行或計程車至博多站 → 地鐵空港線「博多」→「福岡空港」（約5分，¥260）</p>
+            <p><span class="label">行李</span><br>建議前一天晚上完成打包，大件行李可事先確認飯店是否可提早 Check-out</p>
+            <p><span class="label">注意</span><br>國際線航廈與國內線不同棟，抵達機場後需搭接駁巴士約5分鐘至國際線，請留意指標</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">07:30</span>
+          <span class="card-name">機場免稅店・最後採購</span>
+          <span class="tag tag-shop">購物</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">推薦</span><br>福岡機場國際線出境後有免稅店，可購買明太子、清酒、零食、化妝品</p>
+            <p><span class="label">注意</span><br>液體類食品（明太子、醬料）須托運行李，不可帶入手提</p>
+            <p><span class="label">伴手禮</span><br>明太子（ふくや/やまや 機場專門店）/ 博多通りもん / 筑紫もち</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="activity-card">
+        <div class="card-summary">
+          <span class="time-badge">10:05</span>
+          <span class="card-name">福岡出發 → 桃園回家</span>
+          <span class="tag tag-train">回程</span>
+        </div>
+        <details class="card-details">
+          <summary>展開詳情</summary>
+          <div class="detail-body">
+            <p><span class="label">航班</span><br>福岡機場（FUK）10:05 起飛，預計抵達桃園約 11:30～12:00</p>
+            <p><span class="label">提醒</span><br>入境台灣前確認有無需申報物品；日本購買超過免稅額度需主動申報</p>
+          </div>
+        </details>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Concierge Section -->
+<div class="concierge">
+  <h2>旅遊顧問小幫手</h2>
+  <div class="concierge-grid">
+
+    <div class="concierge-card">
+      <h3>
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        行李打包清單
+      </h3>
+      <ul>
+        <li>護照 + IC卡（Suica/ICOCA 或 Hayakaken）</li>
+        <li>日幣現金（屋台、小攤多現金付款）</li>
+        <li>手機：JR九州 APP（廣域PASS電子票）、九州FunPass APP</li>
+        <li>由布院之森訂位票（紙本或電子）</li>
+        <li>輕薄外套（由布院山區較涼，早晚溫差大）</li>
+        <li>防曬 + 雨傘（九州夏季多午後雷陣雨）</li>
+        <li>舒適步行鞋（每日步行量大）</li>
+        <li>環保袋（日本超市需購物袋）</li>
+        <li>行動電源</li>
+      </ul>
+    </div>
+
+    <div class="concierge-card">
+      <h3>
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        預算參考（每人）
+      </h3>
+      <table class="budget-table">
+        <tr><td>地鐵一日券（Day1）</td><td>¥640</td></tr>
+        <tr><td>由布院之森（已訂）</td><td>已付</td></tr>
+        <tr><td>福岡廣域PASS</td><td>另計</td></tr>
+        <tr><td>九州FunPass 14天7合1</td><td>另計</td></tr>
+        <tr><td>唐戶市場渡輪（¥200×2）</td><td>¥400</td></tr>
+        <tr><td>大牟田→西鐵柳川（方案A）</td><td>¥340</td></tr>
+        <tr><td>柳川→太宰府 西鐵</td><td>≈¥700</td></tr>
+        <tr><td>太宰府→天神→博多</td><td>≈¥730</td></tr>
+        <tr><td>餐飲（5天估算）</td><td>¥15,000～</td></tr>
+        <tr><td>伴手禮 / 購物</td><td>個人</td></tr>
+        <tr class="budget-total"><td>交通額外費用合計（約）</td><td>¥2,170~</td></tr>
+      </table>
+    </div>
+
+    <div class="concierge-card">
+      <h3>
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        在地禮儀 / 注意事項
+      </h3>
+      <ul>
+        <li>神社境內勿大聲喧嘩，參拜需遵循二禮二拍一禮</li>
+        <li>屋台與小市場多禁止邊走邊吃，找定點再吃</li>
+        <li>柳川遊船勿站立或探出船身，聽從船夫指示</li>
+        <li>由布院之森禁止攜帶外食至餐車</li>
+        <li>旦過市場部分區域禁止拍照，進入前確認</li>
+        <li>門司港渡輪（關門渡輪）建議提前查當天班次時刻</li>
+        <li>垃圾須攜回，路上垃圾桶極少</li>
+      </ul>
+    </div>
+
+    <div class="concierge-card">
+      <h3>
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        貨幣 / 支付提示
+      </h3>
+      <ul>
+        <li>日本使用日圓（JPY），建議攜帶足夠現金</li>
+        <li>屋台、旦過市場、小攤多為<strong>現金唯一</strong></li>
+        <li>大型百貨、便利商店支援 Visa/Mastercard/JCB 及 PayPay</li>
+        <li>IC 卡（ICOCA/Suica）可在地鐵、便利商店、部分自動販賣機使用</li>
+        <li>退稅（免稅）：在標示「Tax Free」商店，單次購買達¥5,000可退消費稅，護照必備</li>
+        <li>ATM：7-Eleven、郵便局 ATM 支援外國金融卡</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  行程由 Travel Assistant 生成 · 部分資訊請於出發前向官方確認 · 票價與營業時間可能隨季節調整<br>
+  Please verify opening hours and prices before visiting.
+</footer>
+
+<script>
+  (function renderTicNoteMetaDate() {
+    var dateEl = document.getElementById('r-date');
+    if (!dateEl) return;
+    dateEl.textContent = new Date().toLocaleDateString('en-US', {
+      month: 'long', day: 'numeric', year: 'numeric'
+    });
+  })();
+</script>
+</body>
+</html>
